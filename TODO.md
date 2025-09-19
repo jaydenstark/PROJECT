@@ -1,0 +1,12 @@
+- [x] Update .product:hover button in style.css to have gradient fill on hover
+- [x] Add functionality to increase cart count when add to cart buttons are clicked
+- [x] Remove the stroke/border from the add to cart button on hover
+- [x] Add smooth scrolling to the page
+- [ ] Implement scroll-triggered animations for sections
+- [x] Add a gradient background to the body
+- [ ] Create blurred sections for better visual hierarchy
+- [ ] Implement a light mode toggle button
+- [ ] Add a music player with play/pause controls
+- [x] Create a dropdown button labeled "catalog" in the navigation
+- [ ] Create individual product detail pages for each of the 8 products (created for USB Cable)
+- [x] Make products in store.html clickable to their detail pages (for USB Cable)
