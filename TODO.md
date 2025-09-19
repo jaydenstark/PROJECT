@@ -1,12 +1,8 @@
-- [x] Update .product:hover button in style.css to have gradient fill on hover
-- [x] Add functionality to increase cart count when add to cart buttons are clicked
-- [x] Remove the stroke/border from the add to cart button on hover
-- [x] Add smooth scrolling to the page
-- [ ] Implement scroll-triggered animations for sections
-- [x] Add a gradient background to the body
-- [ ] Create blurred sections for better visual hierarchy
-- [ ] Implement a light mode toggle button
-- [ ] Add a music player with play/pause controls
-- [x] Create a dropdown button labeled "catalog" in the navigation
-- [ ] Create individual product detail pages for each of the 8 products (created for USB Cable)
-- [x] Make products in store.html clickable to their detail pages (for USB Cable)
+# TODO List for Cart Functionality
+
+- [x] Update cart.html to remove static cart item and add dynamic container for cart items
+- [x] Add function in script.js to load cart items from localStorage and render them in cart.html
+- [x] Add functionality to update quantity of items in cart
+- [x] Add remove item functionality
+- [x] Calculate and display total quantity and total price
+- [ ] Test the cart by adding items and viewing the cart page

@@ -4,28 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
+        <div class="cart-header">
+            <img src="https://img.icons8.com/fluency/48/shopping-cart.png" alt="Cart" class="cart-icon" />
+        </div>
         <h1>Your Shopping Cart</h1>
         <div id="cart-items">
-            <!-- Cart items will be displayed here -->
-            <div class="cart-item">
-                <img src="images/PVC insulated-non-sheathed Single-core cable with flexible conductor - H05V-K-H07V-K w.webp" alt="PVC Cable" />
-                <div class="cart-item-details">
-                    <h3>PVC Insulated Cable</h3>
-                    <p>High quality PVC insulated cable</p>
-                </div>
-                <div class="cart-item-quantity">
-                    <input type="number" value="1" min="1" />
-                </div>
-                <div class="cart-item-price">₵15.00</div>
-            </div>
+            <!-- Cart items will be displayed here dynamically -->
+        </div>
+        <div id="cart-total">
+            <p>Total Items: <span id="total-quantity">0</span></p>
+            <p>Total Price: ₵<span id="total-price">0.00</span></p>
         </div>
         <div class="cart-actions">
             <button onclick="window.location.href='store.html'">Continue Shopping</button>
-            <button>Checkout</button>
+            <button onclick="window.location.href='checkout.html'">Checkout</button>
         </div>
     </div>
     <script src="script.js"></script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Checkout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h1>Checkout</h1>
+        <form id="checkout-form">
+            <div>
+                <label for="name">Full Name:</label><br />
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+                <label for="mobile">Mobile Number:</label><br />
+                <input type="tel" id="mobile" name="mobile" required pattern="[0-9]{10,15}" title="Please enter a valid mobile number" />
+            </div>
+            <div>
+                <label for="email">Email Address:</label><br />
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+                <label for="address">Shipping Address:</label><br />
+                <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+            <div>
+                <label for="payment">Payment Method:</label><br />
+                <select id="payment" name="payment" required>
+                    <option value="">Select Payment Method</option>
+                    <option value="mobile-money">Mobile Money</option>
+                    <option value="visa-card">Visa Card</option>
+                    <option value="cod">Cash on Delivery</option>
+                </select>
+            </div>
+            <button type="submit">Place Order</button>
+        </form>
+        <div id="order-message" style="margin-top: 20px; color: green;"></div>
+        <button onclick="window.location.href='store.html'">Back to Store</button>
+    </div>
+    <script>
+        document.getElementById('checkout-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Simple form validation and order confirmation
+            const name = document.getElementById('name').value.trim();
+            const mobile = document.getElementById('mobile').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const payment = document.getElementById('payment').value;
+
+            if (!name || !mobile || !email || !address || !payment) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+
+            // Clear cart after order placed
+            localStorage.removeItem('cart');
+            // Update cart count in store page if open
+            if (window.opener && window.opener.updateCartCount) {
+                window.opener.updateCartCount();
+            }
+
+            document.getElementById('order-message').textContent = 'Thank you for your order, ' + name + '! Your order has been placed successfully.';
+            this.reset();
+        });
+    </script>
+</body>
+</html>

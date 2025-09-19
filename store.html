@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="store.html">Store</a>
-            <a href="cart.html">Cart</a>
+            <a href="cart.html"><img src="https://img.icons8.com/fluency/20/shopping-cart.png" alt="Cart" class="image-placeholder" /> Cart</a>
         </nav>
     </header>
     <!-- Main content area -->
@@ -31,10 +32,10 @@
                 <h2>PVC insulated-non-sheathed Single-core cable with flexible conductor</h2>
                 <!-- Cable Details & Uses -->
                 <p>For general-purpose electrical wiring. </br>
-                    - Fixed internal wiring for power and lighting in buildings.</br>
+          <!--- product details - Fixed internal wiring for power and lighting in buildings.</br>
                     - Connections for electrical appliances and equipment.</br>
                     - Wiring within switchboards and control panels.</br>
-                     Common Applications.</p>
+                     Common Applications.</p>-->
                 <p class="price">₵10.00</p>
                 <label><strong style="color: red;">Quantity:</strong> <input type="number" min="1" value="1" class="quantity"></label> </br>
                 <button class="add-to-cart">Add to Cart</button>
@@ -103,7 +104,8 @@
     </footer>
     <!-- Floating cart link -->
     <div id="floating-cart">
-        <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        <a href="cart.html"><img src="https://img.icons8.com/fluency/20/shopping-cart.png" alt="Cart" class="image-placeholder" /> Cart (<span id="cart-count">0</span>)</a>
     </div>
 </body>
+    <script src="script.js"></script>
 </html>
